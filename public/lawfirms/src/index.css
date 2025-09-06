@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* IvyAI Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 215 27% 10%;
+    
+    /* Navy Blue Primary */
+    --primary: 215 27% 10%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 215 25% 15%;
+    
+    /* Blue Accent for CTAs */
+    --success: 217 91% 60%;
+    --success-foreground: 0 0% 100%;
+    --success-hover: 220 91% 54%;
+    
+    /* Gray Backgrounds */
+    --muted: 210 40% 98%;
+    --muted-foreground: 215 16% 47%;
+    --gray-light: 210 40% 98%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 215 27% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 27% 10%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 27% 10%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 215 27% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 215 27% 10%;
+
+    --radius: 0.75rem;
+    
+    /* Custom gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)) 0%, hsl(var(--success-hover)) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-elevated: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 215 27% 10%;
+    --foreground: 0 0% 98%;
+    --card: 215 25% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 215 25% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 215 27% 10%;
+    --secondary: 215 25% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 215 25% 15%;
+    --muted-foreground: 217 10% 65%;
+    --accent: 215 25% 15%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 215 25% 15%;
+    --input: 215 25% 15%;
+    --ring: 212 12% 84%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-inter;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
