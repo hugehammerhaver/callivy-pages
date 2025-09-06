@@ -1,1 +1,13 @@
-{"rewrites":[{"source":"/(.*)","destination":"https://common-intend-602029.framer.app/"}]}
+{
+    "cleanUrls": true,
+    "headers": [
+      {
+        "source": "/(hvac|lawfirms|medspa|dentist|plumbing|realestate|property-managers)/(.*)",
+        "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, s-maxage=86400" }]
+      }
+    ],
+    "rewrites": [
+      { "source": "/(.*)", "destination": "https://common-intend-602029.framer.app/$1" }
+    ]
+  }
+  
